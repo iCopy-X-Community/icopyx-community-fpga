@@ -25,14 +25,15 @@
 `define FPGA_LF_EDGE_DETECT_READER_FIELD            1
 `define FPGA_LF_EDGE_DETECT_TOGGLE_MODE             2
 
-`include "lo_read.v"
-`include "lo_passthru.v"
-`include "lo_edge_detect.v"
-`include "lo_adc.v"
-`include "util.v"
-`include "clk_divider.v"
+//For ISE 10.1 PROJ,IDE auto include
+//`include "lo_read.v"
+//`include "lo_passthru.v"
+//`include "lo_edge_detect.v"
+//`include "lo_adc.v"
+//`include "util.v"
+//`include "clk_divider.v"
 
-module fpga_lf(
+module fpga_lfmod(
     input spck, output miso, input mosi, input ncs,
     input pck0, input ck_1356meg, input ck_1356megb,
     output pwr_lo, output pwr_hi,

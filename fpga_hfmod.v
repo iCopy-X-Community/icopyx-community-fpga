@@ -27,7 +27,7 @@
 //`include "hi_flite.v"
 //`include "hi_get_trace.v"
 
-module fpga_hf(
+module fpga_hfmod(
     input spck, output miso, input mosi, input ncs,
     input pck0, input ck_1356meg, input ck_1356megb,
     output pwr_lo, output pwr_hi,

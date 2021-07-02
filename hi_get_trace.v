@@ -2,6 +2,8 @@
 //
 // piwi, Feb 2019
 //-----------------------------------------------------------------------------
+//For ISE 10.1 PROJ,IDE cannot apply definition to all files
+`include "define.v"
 
 module hi_get_trace(
        ck_1356megb,

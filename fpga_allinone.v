@@ -40,9 +40,7 @@ fpga_hfmod hfmod(
     adc_d, hfadc_clk, hfadc_noe,
     hfssp_frame, hfssp_din, hfssp_dout, hfssp_clk,
     hfcross_hi, hfcross_lo,
-    hfdbg,
-	 hfPWR_LO_EN,
-	 HF_SNIFF_Q_CON
+    hfdbg
 );
 
 fpga_lfmod lfmod(
@@ -79,6 +77,6 @@ mux2_one 			mux_ssp_clk_all 			(FPGA_SWITCH, ssp_clk, 		hfssp_clk, 		lfssp_clk);
 mux2_oneout 		mux_cross_hi_all 			(FPGA_SWITCH, cross_hi, 	hfcross_hi, 	lfcross_hi);
 mux2_oneout 		mux_cross_lo_all 			(FPGA_SWITCH, cross_lo, 	hfcross_lo, 	lfcross_lo);
 mux2_one 			mux_dbg_all 				(FPGA_SWITCH, dbg, 			hfdbg, 			lfdbg);
-mux2_one 			mux_PWR_LO_EN_all 		(FPGA_SWITCH, PWR_LO_EN, 	hfPWR_LO_EN, 	lfPWR_LO_EN);
+mux2_one 			mux_PWR_LO_EN_all 		(FPGA_SWITCH, PWR_LO_EN, 	1b0, 	         lfPWR_LO_EN);
 
 endmodule
