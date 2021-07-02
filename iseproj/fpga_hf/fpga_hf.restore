@@ -837,10 +837,12 @@ proc restore { { project_dir "" } } {
 
   set user_files { 
       "../../clk_divider.v" 
+      "../../define.v" 
       "../../fpga.ucf" 
       "../../fpga_allinone.v" 
       "../../fpga_hfmod.v" 
       "../../fpga_lfmod.v" 
+      "../../hi_flite.v" 
       "../../hi_get_trace.v" 
       "../../hi_iso14443a.v" 
       "../../hi_reader.v" 
@@ -850,6 +852,8 @@ proc restore { { project_dir "" } } {
       "../../lo_edge_detect.v" 
       "../../lo_passthru.v" 
       "../../lo_read.v" 
+      "../../mux2_onein.v" 
+      "../../mux2_oneout.v" 
       "../../util.v"}
 
   HandleException {
