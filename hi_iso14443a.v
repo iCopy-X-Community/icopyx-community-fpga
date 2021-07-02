@@ -38,7 +38,7 @@ begin
     else if(adc_d < 8) after_hysteresis <= 1'b0;        // U <  1,04V   -> after_hysteresis = 0
     // Note: was >= 3,53V and <= 1,19V. The new trigger values allow more reliable detection of the first bit
     // (it might not reach 3,53V due to the high time constant of the high pass filter in the analogue RF part).
-    // In addition, the new values are more in line with ISO14443-2: "The PICC shall detect the ”End of Pause” after the field exceeds
+    // In addition, the new values are more in line with ISO14443-2: "The PICC shall detect the ”End of Pause�?after the field exceeds
     // 5% of H_INITIAL and before it exceeds 60% of H_INITIAL." Depending on the signal strength, 60% might well be less than 3,53V.
 
 
@@ -209,17 +209,29 @@ reg signed [10:0] rx_mod_falling_edge_max;
 reg signed [10:0] rx_mod_rising_edge_max;
 reg curbit;
 
-`define EDGE_DETECT_THRESHOLD   5
+`define EDGE_DETECT_THRESHOLD   3
+`define EDGE_DETECT_THRESHOLDHIGH   20
 
 always @(negedge adc_clk)
 begin
     if(negedge_cnt[3:0] == mod_detect_reset_time)
     begin
-        // detect modulation signal: if modulating, there must have been a falling AND a rising edge
-        if ((rx_mod_falling_edge_max > `EDGE_DETECT_THRESHOLD) && (rx_mod_rising_edge_max < -`EDGE_DETECT_THRESHOLD))
-                curbit <= 1'b1; // modulation
-            else
-                curbit <= 1'b0; // no modulation
+		  if (mod_type == `FPGA_HF_ISO14443A_SNIFFER)
+		  begin
+			  // detect modulation signal: if modulating, there must have been a falling AND a rising edge
+			  if ((rx_mod_falling_edge_max > `EDGE_DETECT_THRESHOLDHIGH) && (rx_mod_rising_edge_max < -`EDGE_DETECT_THRESHOLDHIGH))
+						 curbit <= 1'b1; // modulation
+					else
+						 curbit <= 1'b0; // no modulation
+		  end
+		  else
+		  begin
+		  			  // detect modulation signal: if modulating, there must have been a falling AND a rising edge
+			  if ((rx_mod_falling_edge_max > `EDGE_DETECT_THRESHOLD) && (rx_mod_rising_edge_max < -`EDGE_DETECT_THRESHOLD))
+						 curbit <= 1'b1; // modulation
+					else
+						 curbit <= 1'b0; // no modulation
+		  end
         // reset modulation detector
         rx_mod_rising_edge_max <= 0;
         rx_mod_falling_edge_max <= 0;
