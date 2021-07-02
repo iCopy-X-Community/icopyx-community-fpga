@@ -27,8 +27,7 @@ module fpga_hf(
     input cross_hi, input cross_lo,
     output dbg,
 	 output PWR_LO_EN,
-	 input FPGA_SWITCH,
-	 output HF_SNIFF_Q_CON
+	 input FPGA_SWITCH
     );
 	 
 	 

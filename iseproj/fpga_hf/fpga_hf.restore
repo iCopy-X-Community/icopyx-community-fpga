@@ -848,10 +848,12 @@ proc restore { { project_dir "" } } {
       "../../hi_reader.v" 
       "../../hi_simulate.v" 
       "../../hi_sniffer.v" 
+      "../../lf_edge_detect.v" 
       "../../lo_adc.v" 
       "../../lo_edge_detect.v" 
       "../../lo_passthru.v" 
       "../../lo_read.v" 
+      "../../lp20khz_1MSa_iir_filter.v" 
       "../../mux2_onein.v" 
       "../../mux2_oneout.v" 
       "../../util.v"}
