@@ -2,7 +2,7 @@ CommandLine-Map
 
 s
 CommandLine-Ngdbuild
-
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\ngdbuild.exe -ise C:/pm3fpga/0921/fpga3sallinone_scj/iseproj/fpga_hf/fpga_hf.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-4 fpga_hf.ngc fpga_hf.ngd
 s
 CommandLine-Par
 
@@ -11,7 +11,7 @@ CommandLine-Xst
 
 s
 Previous-NGD
-
+fpga_hf_prev_built.ngd
 s
 Previous-NGM
 

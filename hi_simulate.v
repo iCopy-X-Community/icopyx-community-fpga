@@ -16,6 +16,10 @@
 // Jonathan Westhues, October 2006
 //-----------------------------------------------------------------------------
 
+//For ISE 10.1 PROJ,IDE cannot apply definition to all files
+`include "define.v"
+
+
 module hi_simulate(
     ck_1356meg,
     pwr_lo, pwr_hi, pwr_oe1, pwr_oe2, pwr_oe3, pwr_oe4,
