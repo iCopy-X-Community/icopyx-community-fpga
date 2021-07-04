@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\ngdbuild.exe -ise C:/pm3fpga/0921/fpga3sallinone_scj/iseproj/fpga_hf/fpga_hf.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-4 fpga_hf.ngc fpga_hf.ngd
-s
-FormatString
-ngdbuild [-p <partname>] {-sd <source_dir>} {-l <library>} [-ur <rules_file[.urf]>] [-dd <output_dir>] [-r] [-a] [-u] [-nt timestamp|on|off] [-uc <ucf_file[.ucf]>] [-aul] [-bm <bmm_file[.bmm]>] [-i] [-modular initial|module|assemble] [-intstyle ise|xflow|silent] [-quiet] [-verbose] [-active <active_module_name>] [-pimpath <pimpath>] {-use_pim <pim_module_name>} [-insert_keep_hierarchy] [--forcengd] {--n <ngl_file>} {--sl <library>} [--global_opt] [--script <tcl_file>] [--incremental] [--csttrans] <design_name> [<ngd_file[.ngd]>]
-s

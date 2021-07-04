@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\bitgen.exe -ise C:/pm3fpga/0921/fpga3sallinone_scj/iseproj/fpga_hf/fpga_hf.ise -intstyle ise -f fpga_hf.ut fpga_hf.ncd
-s
-FormatString
-bitgen [-d] [-j] [-b] [-w] [-l] [-m] [-t] [-n] [-u] [-a] [--p] [-r <bitFile>] [-intstyle ise|xflow|silent] [-ise <projectrepositoryfile>] {-bd <BRAM_data_file> [tag <tagname>]} {-g <setting_value>} <infile[.ncd]> [<outfile>] [<pcffile[.pcf]>]
-s
